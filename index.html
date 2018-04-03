@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Currency Converter</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card bg-dark text-white text-center">
+                    <div class="card-header">
+                        <h4 class="card-title">Currency Converter</h4>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-vertical">
+                            <div class="form-group center">
+                                <label for="numbers">Enter Value:</label>
+                                <input type="number" id="numbers" class="amount form-control" placeholder="Enter value" min="1">
+                            </div>
+                            <div class="form-group inline-block">
+                                <label for="currency_one">From currency:</label>
+                                <select class="currency-lists form-control" id="currency_one" onchange="convertCurrency()">
+                                    <!-- <option value="selectOne">Select</option> -->
+                                    <option value="5">BDT</option>
+                                    <option value="7">USD</option>
+                                    <option value="8">INR</option>
+                                    <option value="9">YUN</option>
+                                </select>
+                            </div>
+                            <div class="form-group inline-block">
+                                <label for="currency_two">To currency:</label>
+                                <select class="currency-lists form-control" id="currency_two" onchange="convertCurrency()">
+                                    <!-- <option value="selectTwo">Select</option> -->
+                                    <option value="10">BGT</option>
+                                    <option value="15">USD</option>
+                                    <option value="40">INR</option>
+                                    <option value="30">YUN</option>
+                                </select>
+                            </div>
+                        </form>
+                        <p class="output">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
