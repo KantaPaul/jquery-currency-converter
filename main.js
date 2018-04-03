@@ -43,10 +43,19 @@ function convertCurrency() {
 }
 
 $(document).ready(function () {
+    $('.currency-lists').on('change', function () {
+        $(this).each(function () {
+            convertCurrency();
+        })
+    });
+
     var myamount = $(".amount").val(),
         select = $(".currency-lists"),
         output = $('.output');
     $(".amount").on('keyup', function () {
-        output.html(($(this).val() * select[0].value).toFixed(2));
+        var result = ($(this).val() * select[0].value);
+        // console.log(select[1].value)
+        // output.html((result * select[1].value).toFixed(2));
+        output.html((result).toFixed(2));
     });
 })
